@@ -11,6 +11,16 @@
 <div th:replace="layout::nav"></div>
 
 <h2>Index Page</h2>
+<table class="table" style="width:100%">
+
+    <!--enhanced for loop-->
+    <tr th:each="data : ${datas}">
+        <td>
+            <a>[{"id":[[${data.id}]],"data":"[[${data.data}]]"}]</a>
+        </td>
+    </tr>
+</table>
+
 
 <div th:replace="layout::footer"></div>
 </body>
